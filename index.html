@@ -3,11 +3,1091 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para ti 💗</title>
+
+    <title>Para ti, mi amor ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080808;
+            color: #f5eee8;
+            font-family: Georgia, "Times New Roman", serif;
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 25px;
+            position: relative;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* =========================
+           PORTADA
+        ========================= */
+
+        .portada {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at center, #211719 0%, #080808 55%);
+            flex-direction: column;
+        }
+
+        .mini-texto {
+            font-size: 12px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #bda7a1;
+            margin-bottom: 35px;
+            animation: aparecer 2s ease;
+        }
+
+        .portada h1 {
+            font-size: clamp(55px, 15vw, 125px);
+            font-weight: normal;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            animation: aparecer 2.5s ease;
+        }
+
+        .portada h2 {
+            font-size: clamp(20px, 5vw, 32px);
+            font-weight: normal;
+            font-style: italic;
+            color: #d9bdb8;
+            margin-bottom: 50px;
+            animation: aparecer 3s ease;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 16px 35px;
+            border: 1px solid #9e7772;
+            color: #f5eee8;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-size: 12px;
+            transition: 0.4s;
+            animation: aparecer 3.5s ease;
+        }
+
+        .boton:hover {
+            background: #f5eee8;
+            color: #080808;
+        }
+
+        .flecha {
+            position: absolute;
+            bottom: 30px;
+            font-size: 20px;
+            color: #9e7772;
+            animation: bajar 2s infinite;
+        }
+
+        /* =========================
+           TITULOS
+        ========================= */
+
+        .numero {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #9e7772;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: clamp(35px, 9vw, 65px);
+            font-weight: normal;
+            margin-bottom: 35px;
+        }
+
+        .texto {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #d8cfcb;
+        }
+
+        .texto p {
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           DOS MESES
+        ========================= */
+
+        .dos-meses {
+            background: #0d0b0b;
+        }
+
+        .frase-grande {
+            font-size: clamp(25px, 6vw, 45px);
+            line-height: 1.5;
+            font-style: italic;
+            margin: 45px auto;
+            max-width: 700px;
+        }
+
+        .destacado {
+            color: #d9aaa4;
+        }
+
+        /* =========================
+           FOTOS TEMPORALES
+        ========================= */
+
+        .foto-placeholder {
+            width: min(90%, 500px);
+            height: 480px;
+            margin: 45px auto;
+            border: 1px solid #4b3937;
+            background:
+                linear-gradient(135deg, #171212, #2a1d1d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #806c68;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           CARTAS
+        ========================= */
+
+        .cartas {
+            background: #0a0909;
+        }
+
+        .carta {
+            max-width: 650px;
+            margin: 25px auto;
+            padding: 30px;
+            border: 1px solid #332626;
+            background: rgba(255,255,255,0.02);
+            cursor: pointer;
+            transition: 0.4s;
+            text-align: left;
+        }
+
+        .carta:hover {
+            border-color: #8d6661;
+            transform: translateY(-3px);
+        }
+
+        .carta-titulo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .carta-contenido {
+            display: none;
+            margin-top: 25px;
+            color: #d8cfcb;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+
+        .carta.abierta .carta-contenido {
+            display: block;
+        }
+
+        /* =========================
+           NIÑO INTERIOR
+        ========================= */
+
+        .nino {
+            background:
+                radial-gradient(circle at center, #241719, #080808 70%);
+        }
+
+        .corazon {
+            font-size: 45px;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final {
+            min-height: 100vh;
+            background: #050505;
+        }
+
+        .final h3 {
+            font-size: clamp(35px, 9vw, 70px);
+        }
+
+        .firma {
+            margin-top: 50px;
+            font-style: italic;
+            color: #c8a6a1;
+            font-size: 22px;
+        }
+
+        .regalo {
+            margin: 60px auto 0;
+            width: 100px;
+            height: 80px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .caja {
+            width: 100px;
+            height: 70px;
+            background: #714c49;
+            position: absolute;
+            bottom: 0;
+            border-radius: 3px;
+        }
+
+        .tapa {
+            width: 110px;
+            height: 18px;
+            background: #936965;
+            position: absolute;
+            top: 0;
+            left: -5px;
+            border-radius: 3px;
+            transition: 0.8s;
+        }
+
+        .cinta {
+            position: absolute;
+            width: 15px;
+            height: 70px;
+            background: #d0aaa4;
+            left: 43px;
+            bottom: 0;
+        }
+
+        .regalo.abierto .tapa {
+            transform: translateY(-45px) rotate(-8deg);
+        }
+
+        .mensaje-regalo {
+            display: none;
+            margin: 50px auto 0;
+            max-width: 650px;
+            font-size: 18px;
+            line-height: 2;
+            color: #ddd3cf;
+        }
+
+        .mensaje-regalo.visible {
+            display: block;
+            animation: aparecer 1.5s ease;
+        }
+
+        /* =========================
+           ANIMACIONES
+        ========================= */
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bajar {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 65px 22px;
+            }
+
+            .texto {
+                font-size: 16px;
+            }
+
+            .foto-placeholder {
+                height: 420px;
+            }
+
+            .carta {
+                padding: 24px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Para ti...</h1>
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <section class="portada">
+
+        <div class="mini-texto">
+            Para ti...
+        </div>
+
+        <h1>Mi amor</h1>
+
+        <h2>tengo algo que quiero enseñarte ❤️</h2>
+
+        <a href="#dos-meses" class="boton">
+            DESCUBRIR
+        </a>
+
+        <div class="flecha">
+            ↓
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DOS MESES
+    ========================= -->
+
+    <section class="dos-meses" id="dos-meses">
+
+        <div class="contenedor">
+
+            <div class="numero">
+                01 · NOSOTROS
+            </div>
+
+            <h3>Dos meses.</h3>
+
+            <div class="frase-grande">
+                “Y pensar que hace apenas unos meses
+                todavía no sabía todo lo que iba a llegar
+                a significar tenerte en mi vida.”
+            </div>
+
+            <div class="texto">
+
+                <p>
+                    Amorrr, hoy cumplimos dos meses. 🥹❤️
+                </p>
+
+                <p>
+                    Y no te voy a mentir, me parece un poquito
+                    loco pensar en todo lo que hemos vivido
+                    en tan poquito tiempo.
+                </p>
+
+                <p>
+                    Hemos tenido momentos demasiado bonitos,
+                    hemos reído, hemos hecho tonterías,
+                    hemos tenido nuestros dramas, hemos tenido
+                    días difíciles y también hemos tenido que
+                    aprender a entendernos.
+                </p>
+
+                <p>
+                    <span class="destacado">
+                        No todo ha sido color de rosa.
+                    </span>
+                </p>
+
+                <p>
+                    Pero si hay algo que quiero celebrar hoy,
+                    además de nuestros dos meses, es que
+                    seguimos aquí.
+                </p>
+
+                <p>
+                    Juntos. Intentándolo. Aprendiendo.
+                    Eligiéndonos una vez más.
+                </p>
+
+                <p>
+                    Y para mí eso también es bonito.
+                </p>
+
+            </div>
+
+            <div class="foto-placeholder">
+                aquí irá una foto de nosotros ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LO QUE SIENTO
+    ========================= -->
+
+    <section>
+
+        <div class="contenedor">
+
+            <div class="numero">
+                02 · LO QUE SIENTO
+            </div>
+
+            <h3>Te extraño.</h3>
+
+            <div class="texto">
+
+                <p>
+                    A veces creo que no sabes cuánto te extraño
+                    cuando estás lejos.
+                </p>
+
+                <p>
+                    Te pienso mientras hago cualquier cosa.
+                    Mientras veo una película, mientras leo,
+                    mientras me baño, mientras estoy haciendo
+                    literalmente nada. JAJAJA. 😭
+                </p>
+
+                <p>
+                    Simplemente apareces en mi cabeza.
+                </p>
+
+                <p>
+                    Y cuando no sé nada de ti también me preocupo.
+                    Quiero saber si estás bien, si comiste,
+                    si estás tranquilo y si todo está bien por allá.
+                </p>
+
+                <p>
+                    Supongo que cuando alguien te importa
+                    muchísimo, simplemente quieres saber
+                    que está bien.
+                </p>
+
+            </div>
+
+            <div class="foto-placeholder">
+                aquí irá una foto de él ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ADMIRACIÓN
+    ========================= -->
+
+    <section>
+
+        <div class="contenedor">
+
+            <div class="numero">
+                03 · TÚ
+            </div>
+
+            <h3>Te admiro.</h3>
+
+            <div class="texto">
+
+                <p>
+                    Amor, quiero que sepas que no solamente
+                    me gustas porque eres guapo. Aunque sí...
+                    estás demasiado bueno. 😭😂❤️
+                </p>
+
+                <p>
+                    Me gusta la persona que eres.
+                </p>
+
+                <p>
+                    Admiro la manera en la que te esfuerzas
+                    por lo que quieres, la forma en la que
+                    persigues tus metas y todas las cosas que
+                    haces aunque estés cansado.
+                </p>
+
+                <p>
+                    Y me hace sentir muy orgullosa poder decir:
+                </p>
+
+                <p class="frase-grande">
+                    “Ese es mi hombre.” ❤️
+                </p>
+
+                <p>
+                    Ojalá algún día pudieras verte con los
+                    mismos ojos con los que yo te veo.
+                </p>
+
+                <p>
+                    Porque yo sí veo todas esas cosas bonitas
+                    que quizás tú no notas.
+                </p>
+
+            </div>
+
+            <div class="foto-placeholder">
+                aquí irá otra foto tuya ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NIÑO INTERIOR
+    ========================= -->
+
+    <section class="nino">
+
+        <div class="contenedor">
+
+            <div class="corazon">
+                ♡
+            </div>
+
+            <div class="numero">
+                04 · ALGO QUE DESEO PARA TI
+            </div>
+
+            <h3>Tu niño interior.</h3>
+
+            <div class="texto">
+
+                <p>
+                    Hay algo que quiero que nunca olvides,
+                    mi amor.
+                </p>
+
+                <p>
+                    Quiero que conmigo siempre puedas ser tú.
+                </p>
+
+                <p>
+                    Quiero que puedas hacer tus tonterías,
+                    reírte de cualquier cosa, molestarme,
+                    contarme lo que piensas y sacar ese niño
+                    que llevas dentro sin sentir que tienes
+                    que esconderlo.
+                </p>
+
+                <p>
+                    Quiero que tu niño interior siempre tenga
+                    un lugar conmigo.
+                </p>
+
+                <p>
+                    Quiero verlo feliz.
+                </p>
+
+                <p>
+                    Quiero cuidarlo también.
+                </p>
+
+                <p>
+                    Y quiero que sepas que conmigo nunca tienes
+                    que fingir ser alguien diferente.
+                </p>
+
+                <p class="frase-grande">
+                    A mí me gusta quien eres.
+                </p>
+
+                <p>
+                    Así, tal cual. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOSOTROS
+    ========================= -->
+
+    <section>
+
+        <div class="contenedor">
+
+            <div class="numero">
+                05 · NOSOTROS
+            </div>
+
+            <h3>Qué bonito que seas tú.</h3>
+
+            <div class="texto">
+
+                <p>
+                    Me gusta tenerte como mi novio.
+                </p>
+
+                <p>
+                    Me gusta poder decir “mi amor” y saber
+                    que estoy hablando de ti.
+                </p>
+
+                <p>
+                    Me gustan tus abrazos, tus besos en la
+                    frente, tus ocurrencias, nuestras tonterías,
+                    cocinar contigo, molestarte, hacerte
+                    mascarillas JAJAJA y simplemente estar
+                    contigo.
+                </p>
+
+                <p>
+                    Porque contigo hasta lo más sencillo
+                    termina siendo especial.
+                </p>
+
+            </div>
+
+            <div class="foto-placeholder">
+                aquí irá una foto juntos ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LA SEMANA
+    ========================= -->
+
+    <section>
+
+        <div class="contenedor">
+
+            <div class="numero">
+                06 · CUANDO TE EXTRAÑÉ
+            </div>
+
+            <h3>Hubo una semana...</h3>
+
+            <div class="texto">
+
+                <p>
+                    Hubo una semana en la que no hablamos.
+                </p>
+
+                <p>
+                    Y aunque los días siguieron pasando
+                    normalmente, hubo una parte de ellos
+                    que se sintió diferente.
+                </p>
+
+                <p>
+                    Me faltaba contarte cualquier tontería.
+                    Me faltaba molestarte.
+                    Me faltaba decirte “amorrr”.
+                </p>
+
+                <p>
+                    Y me di cuenta de cuánto te extraño
+                    cuando no estás.
+                </p>
+
+                <p class="frase-grande">
+                    Te extrañé muchísimo.
+                </p>
+
+                <p>
+                    Y aun después de todo eso, aquí estamos.
+                </p>
+
+                <p>
+                    Y eso también forma parte de nuestra historia.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CARTAS
+    ========================= -->
+
+    <section class="cartas">
+
+        <div class="contenedor">
+
+            <div class="numero">
+                07 · MIS CARTAS
+            </div>
+
+            <h3>Cosas que quería decirte.</h3>
+
+            <div class="texto">
+
+                <p>
+                    Hay cosas que a veces me cuesta decirte
+                    cuando estamos hablando normalmente.
+                </p>
+
+                <p>
+                    Así que decidí dejarlas aquí para ti.
+                </p>
+
+            </div>
+
+
+            <div class="carta">
+
+                <div class="carta-titulo">
+                    <span>♡ Carta para ti</span>
+                    <span>+</span>
+                </div>
+
+                <div class="carta-contenido">
+
+                    Amorrr, hoy simplemente quiero recordarte
+                    lo muchísimo que te quiero. 🥹❤️
+
+                    <br><br>
+
+                    No sé en qué momento pasó, pero poquito a
+                    poquito te fuiste convirtiendo en alguien
+                    demasiado importante para mí.
+
+                    <br><br>
+
+                    Me encanta tenerte en mi vida, me encanta
+                    poder llamarte mi amor y me encanta saber
+                    que entre tantas personas coincidimos tú
+                    y yo.
+
+                    <br><br>
+
+                    Y si algún día dudas de lo maravilloso que
+                    eres, quiero que recuerdes que yo sí lo veo.
+
+                    <br><br>
+
+                    Te quiero muchísimo, mi amor. ❤️
+
+                    <br><br>
+
+                    — Tu niña.
+
+                </div>
+
+            </div>
+
+
+            <div class="carta">
+
+                <div class="carta-titulo">
+                    <span>♡ Lo que admiro de ti</span>
+                    <span>+</span>
+                </div>
+
+                <div class="carta-contenido">
+
+                    Amorrr, quiero que sepas que me siento
+                    orgullosa de ti.
+
+                    <br><br>
+
+                    Admiro la manera en la que te esfuerzas
+                    por lo que quieres y cómo sigues adelante
+                    incluso cuando estás cansado.
+
+                    <br><br>
+
+                    Me encanta el hombre que eres y me encanta
+                    poder decir que eres mi novio.
+
+                    <br><br>
+
+                    Estoy orgullosa de ti.
+
+                    <br><br>
+
+                    Te admiro muchísimo. ❤️
+
+                    <br><br>
+
+                    — Tu niña.
+
+                </div>
+
+            </div>
+
+
+            <div class="carta">
+
+                <div class="carta-titulo">
+                    <span>♡ Cuando te extraño</span>
+                    <span>+</span>
+                </div>
+
+                <div class="carta-contenido">
+
+                    Te extraño más de lo que probablemente
+                    te digo.
+
+                    <br><br>
+
+                    A veces simplemente quisiera tenerte aquí,
+                    abrazarte, hablar contigo de cualquier
+                    tontería y quedarme pegadita a ti.
+
+                    <br><br>
+
+                    Y cuando vuelvas, prepárate porque tengo
+                    demasiados abrazos y demasiados besos
+                    pendientes. 😭💋
+
+                    <br><br>
+
+                    — Tu niña. ❤️
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LO QUE QUIERO CONTIGO
+    ========================= -->
+
+    <section>
+
+        <div class="contenedor">
+
+            <div class="numero">
+                08 · LO QUE QUIERO
+            </div>
+
+            <h3>Quiero estar para ti.</h3>
+
+            <div class="texto">
+
+                <p>
+                    No quiero ser solamente tu novia.
+                </p>
+
+                <p>
+                    Quiero ser alguien con quien puedas contar.
+                </p>
+
+                <p>
+                    Quiero apoyarte cuando las cosas sean
+                    difíciles, celebrar contigo cuando todo
+                    salga bien, escucharte cuando necesites
+                    hablar y ayudarte en todo lo que pueda.
+                </p>
+
+                <p>
+                    Quiero verte cumplir tus sueños.
+                </p>
+
+                <p>
+                    Quiero verte feliz.
+                </p>
+
+                <p>
+                    Y quiero hacer todo lo que esté en mis manos
+                    para que cuando mires a tu lado sientas que
+                    tienes a alguien que está contigo.
+                </p>
+
+                <p class="frase-grande">
+                    Quiero hacerte feliz, mi amor. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <section class="final">
+
+        <div class="contenedor">
+
+            <div class="numero">
+                09 · PARA TI
+            </div>
+
+            <h3>
+                Feliz 2 meses,<br>
+                mi amor. ❤️
+            </h3>
+
+            <div class="texto">
+
+                <p>
+                    Gracias por quedarte.
+                </p>
+
+                <p>
+                    Gracias por elegirme.
+                </p>
+
+                <p>
+                    Gracias por permitirme quererte.
+                </p>
+
+                <p>
+                    No sé exactamente qué nos espera más
+                    adelante, pero sí sé algo.
+                </p>
+
+                <p>
+                    Hoy, después de todo lo que hemos vivido,
+                    sigo aquí.
+                </p>
+
+                <p class="frase-grande">
+                    Y te elegiría otra vez.
+                </p>
+
+                <p>
+                    Y otra vez.
+                </p>
+
+                <p>
+                    Y otra vez. ❤️
+                </p>
+
+            </div>
+
+            <div class="firma">
+                — Tu niña. 🥹❤️
+            </div>
+
+
+            <!-- REGALO -->
+
+            <div class="regalo" id="regalo">
+
+                <div class="tapa"></div>
+
+                <div class="caja"></div>
+
+                <div class="cinta"></div>
+
+            </div>
+
+            <div class="mensaje-regalo" id="mensajeRegalo">
+
+                <p>
+                    Hay algo más que quiero decirte...
+                </p>
+
+                <br>
+
+                <p>
+                    Pero para eso necesito que me prestes
+                    atención.
+                </p>
+
+                <br>
+
+                <p>
+                    Y que me mires a los ojos. ❤️
+                </p>
+
+                <br>
+
+                <p>
+                    Lo demás...
+                </p>
+
+                <p>
+                    te lo quiero decir yo.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        /* Abrir cartas */
+
+        const cartas = document.querySelectorAll(".carta");
+
+        cartas.forEach(carta => {
+
+            carta.addEventListener("click", () => {
+
+                carta.classList.toggle("abierta");
+
+            });
+
+        });
+
+
+        /* Abrir regalo */
+
+        const regalo = document.getElementById("regalo");
+        const mensajeRegalo = document.getElementById("mensajeRegalo");
+
+        regalo.addEventListener("click", () => {
+
+            regalo.classList.toggle("abierto");
+
+            mensajeRegalo.classList.toggle("visible");
+
+        });
+
+    </script>
 
 </body>
-</html>
+    </html>
