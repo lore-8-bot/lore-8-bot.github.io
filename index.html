@@ -7,25 +7,6 @@
     <title>Para ti, amorcitoo</title>
 
     <style>
-        .portada .texto-portada {
-            font-size: 14px;
-            letter-spacing: 1px;
-            line-height: 1.6;
-            text-align: center;
-        }
-
-        .portada .primero {
-            margin: 8px 0 3px;
-        }
-
-        .portada .segundo {
-            margin: 3px 0 45px;
-        }
-
-        .portada .boton {
-            margin-top: 45px;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -47,7 +28,19 @@
            BLOQUEO INICIAL
         ========================= */
 
-        
+        body.portada-activa {
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        body.portada-activa .portada {
+            display: flex;
+        }
+
+        body.portada-activa > section:not(.portada) {
+            display: none;
+        }
+
         section {
             min-height: 100vh;
             display: flex;
@@ -101,6 +94,21 @@
             animation: aparecer 3s ease;
         }
 
+        .portada .texto-portada {
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .portada .primero {
+            margin: 8px 0 3px;
+        }
+
+        .portada .segundo {
+            margin: 3px 0 45px;
+        }
+
         .boton {
             display: inline-block;
             padding: 16px 35px;
@@ -111,6 +119,10 @@
             font-size: 12px;
             transition: 0.4s;
             animation: aparecer 3.5s ease;
+        }
+
+        .portada .boton {
+            margin-top: 45px;
         }
 
         .boton:hover {
@@ -182,13 +194,12 @@
         .foto-real {
             width: min(90%, 500px);
             height: auto;
-            max-height: 700px;
-            object-fit: contain;
-            margin: 45px auto;
+            max-width: 500px;
             display: block;
+            margin: 45px auto;
             border: 1px solid #4b3937;
             border-radius: 2px;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
         }
 
         /* =========================
@@ -294,6 +305,7 @@
             left: -5px;
             border-radius: 3px;
             transition: 0.8s;
+            z-index: 2;
         }
 
         .cinta {
@@ -303,6 +315,7 @@
             background: #d0aaa4;
             left: 43px;
             bottom: 0;
+            z-index: 1;
         }
 
         .regalo.abierto .tapa {
@@ -365,7 +378,7 @@
 
             .foto-real {
                 width: 92%;
-                max-height: none;
+                max-width: 500px;
             }
 
             .carta {
@@ -594,7 +607,7 @@
 
             <img
                 src="fotos/mia.jpg"
-                alt="Yo ❤️"
+                alt="Una foto mía ❤️"
                 class="foto-real"
             >
 
@@ -668,12 +681,6 @@
 
             </div>
 
-            <img
-                src="fotos/el.jpg"
-                alt="Él ❤️"
-                class="foto-real"
-            >
-
         </div>
 
     </section>
@@ -725,6 +732,12 @@
                 </p>
 
             </div>
+
+            <img
+                src="fotos/el.jpg"
+                alt="Él ❤️"
+                class="foto-real"
+            >
 
         </div>
 
@@ -970,4 +983,346 @@
 
                     <br><br>
 
-                    Quiero que
+                    Quiero que los próximos meses nos encuentren
+                    creciendo, no solamente como pareja, sino también
+                    como personas. Quiero que aprendamos el uno del
+                    otro, que nos tengamos paciencia, que podamos
+                    hablar cuando algo nos moleste en lugar de
+                    guardárnoslo, que podamos disfrutar cuando las
+                    cosas estén bonitas y apoyarnos cuando no lo estén
+                    tanto.
+
+                    <br><br>
+
+                    Y sobre todo, quiero que cada día podamos seguir
+                    eligiéndonos, no porque sea fácil ni porque nunca
+                    vayamos a tener problemas, sino porque, incluso
+                    cuando las cosas se pongan difíciles, podamos
+                    mirar lo que tenemos y pensar:
+
+                    <br><br>
+
+                    <span class="frase-grande">
+                        “Sí, todavía quiero estar aquí contigo”. 🥹❤️
+                    </span>
+
+                    <br>
+
+                    Espero que podamos querernos muchísimo, darnos
+                    mucho amor, reírnos hasta que nos duela la barriga,
+                    salir, tener más tiempo de calidad, hacer más cosas
+                    juntos y seguir creando recuerdos que algún día
+                    podamos mirar hacia atrás y decir:
+                    “mira todo lo que hemos vivido”. 🥹
+
+                    <br><br>
+
+                    Y gracias, amor. Gracias por soportarme estos dos
+                    meses JAJAJA 😭❤️, gracias por seguir aquí, por
+                    dejarme conocer partes de ti y por permitirme
+                    compartir contigo una parte de mi vida también.
+
+                    <br><br>
+
+                    No sé exactamente qué nos traerán los próximos
+                    meses, pero sí sé lo que quiero: que sigamos
+                    creciendo, mejorando poquito a poquito y
+                    aprendiendo a querernos cada vez más.
+
+                    <br><br>
+
+                    <strong>
+                        Felices dos meses, mi vida. 🥹❤️
+                    </strong>
+
+                    <br><br>
+
+                    Te quiero un montón. 💋🥹
+
+                </div>
+
+            </div>
+
+
+            <!-- CARTA 3 -->
+
+            <div class="carta">
+
+                <div class="carta-titulo">
+                    <span>♡ Cuando te extraño</span>
+                    <span>+</span>
+                </div>
+
+                <div class="carta-contenido">
+
+                    Te extraño más de lo que probablemente
+                    te digo. 🥺
+
+                    <br><br>
+
+                    A veces simplemente quisiera tenerte aquí,
+                    abrazarte, hablar contigo de cualquier
+                    tontería y quedarme pegadita a ti.
+
+                    <br><br>
+
+                    Y cuando vuelvas, prepárate porque tengo
+                    demasiados abrazos y demasiados besos
+                    pendientes. 😭😘❤️
+
+                    <br><br>
+
+                    Porque sí, puedo estar haciendo cualquier
+                    cosa y de repente pensar:
+                    “quiero ver a mi niño”. 🥹
+
+                    <br><br>
+
+                    Así que cuando te diga que te extraño,
+                    probablemente significa que quiero un
+                    abrazo tuyo, un besito en la frente y
+                    quedarme contigo un ratito. 🫶🏼
+
+                    <br><br>
+
+                    — Mua 💋❤️
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LO QUE QUIERO CONTIGO
+    ========================= -->
+
+    <section>
+
+        <div class="contenedor">
+
+            <div class="numero">
+                08 · LO QUE QUIERO
+            </div>
+
+            <h3>Quiero estar para ti.</h3>
+
+            <div class="texto">
+
+                <p>
+                    No quiero ser solamente tu novia.
+                </p>
+
+                <p>
+                    Quiero ser alguien con quien puedas contar.
+                </p>
+
+                <p>
+                    Quiero apoyarte cuando las cosas sean
+                    difíciles, celebrar contigo cuando todo
+                    salga bien, escucharte cuando necesites
+                    hablar y ayudarte en todo lo que pueda. 🫶🏼
+                </p>
+
+                <p>
+                    Quiero verte cumplir tus sueños.
+                </p>
+
+                <p>
+                    Quiero verte feliz.
+                </p>
+
+                <p>
+                    Y quiero hacer todo lo que esté en mis manos
+                    para que cuando mires a tu lado sientas que
+                    tienes a alguien que está contigo.
+                </p>
+
+                <p class="frase-grande">
+                    Quiero hacerte feliz, mi niño. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <section class="final">
+
+        <div class="contenedor">
+
+            <div class="numero">
+                09 · PARA TI
+            </div>
+
+            <h3>
+                Feliz 2 meses,<br>
+                mi vida. ❤️
+            </h3>
+
+            <div class="texto">
+
+                <p>
+                    Gracias por quedarte, aunque se que no es facil soportarme jaja 🥹
+                </p>
+
+                <p>
+                    Gracias por elegirme 🫶🏼
+                </p>
+
+                <p>
+                    Gracias por permitirme quererte 😘
+                </p>
+
+                <p>
+                    No sé exactamente qué nos espera más
+                    adelante, pero sí sé algo.
+                </p>
+
+                <p>
+                    Hoy, después de todo lo que hemos vivido,
+                    sigo aquí.
+                </p>
+
+                <p class="frase-grande">
+                    Y te elegiría otra vez. 🥹
+                </p>
+
+                <p>
+                    Y otra vez.
+                </p>
+
+                <p>
+                    Y otra vez. ❤️
+                </p>
+
+            </div>
+
+            <div class="firma">
+                Toca la caja para que abras el regalo 🎁👀
+            </div>
+
+
+            <!-- REGALO -->
+
+            <div class="regalo" id="regalo">
+
+                <div class="tapa"></div>
+
+                <div class="caja"></div>
+
+                <div class="cinta"></div>
+
+            </div>
+
+            <div class="mensaje-regalo" id="mensajeRegalo">
+
+                <p>
+                    Holaaa, solo soy yo otra vez jajjaj, na mentiris.
+                    Hay algo más que quiero decirte... 🥹
+                </p>
+
+                <br>
+
+                <p>
+                    Pero para eso necesito que me prestes
+                    atención.
+                </p>
+
+                <br>
+
+                <p>
+                    Y que me mires a los ojos. ❤️
+                </p>
+
+                <br>
+
+                <p>
+                    Lo demás...
+                </p>
+
+                <p>
+                    te lo quiero decir yo. 🫶🏼
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        /* =========================
+           BOTÓN DESCUBRIR
+        ========================= */
+
+        const botonDescubrir =
+            document.getElementById("botonDescubrir");
+
+        botonDescubrir.addEventListener("click", function(evento) {
+
+            evento.preventDefault();
+
+            document.body.classList.remove("portada-activa");
+
+            setTimeout(function() {
+
+                document.getElementById("dos-meses").scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }, 50);
+
+        });
+
+
+        /* =========================
+           ABRIR CARTAS
+        ========================= */
+
+        const cartas = document.querySelectorAll(".carta");
+
+        cartas.forEach(carta => {
+
+            carta.addEventListener("click", () => {
+
+                carta.classList.toggle("abierta");
+
+            });
+
+        });
+
+
+        /* =========================
+           ABRIR REGALO
+        ========================= */
+
+        const regalo =
+            document.getElementById("regalo");
+
+        const mensajeRegalo =
+            document.getElementById("mensajeRegalo");
+
+        regalo.addEventListener("click", () => {
+
+            regalo.classList.toggle("abierto");
+
+            mensajeRegalo.classList.toggle("visible");
+
+        });
+
+    </script>
+
+</body>
+                            </html>
