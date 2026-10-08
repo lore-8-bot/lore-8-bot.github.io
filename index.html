@@ -7,6 +7,23 @@
     <title>Para ti, amorcitoo</title>
 
     <style>
+        .portada .texto-portada {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.portada .primero {
+    margin: 8px 0 3px;
+}
+
+.portada .segundo {
+    margin: 3px 0 45px;
+}
+        .portada .boton {
+    margin-top: 45px;
+        }
         * {
             box-sizing: border-box;
             margin: 0;
@@ -94,21 +111,6 @@
             animation: aparecer 3s ease;
         }
 
-        .portada .texto-portada {
-            font-size: 14px;
-            letter-spacing: 1px;
-            line-height: 1.6;
-            text-align: center;
-        }
-
-        .portada .primero {
-            margin: 8px 0 3px;
-        }
-
-        .portada .segundo {
-            margin: 3px 0 45px;
-        }
-
         .boton {
             display: inline-block;
             padding: 16px 35px;
@@ -119,10 +121,6 @@
             font-size: 12px;
             transition: 0.4s;
             animation: aparecer 3.5s ease;
-        }
-
-        .portada .boton {
-            margin-top: 45px;
         }
 
         .boton:hover {
@@ -195,11 +193,10 @@
             width: min(90%, 500px);
             height: auto;
             max-width: 500px;
-            display: block;
             margin: 45px auto;
+            display: block;
             border: 1px solid #4b3937;
             border-radius: 2px;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
         }
 
         /* =========================
@@ -305,7 +302,6 @@
             left: -5px;
             border-radius: 3px;
             transition: 0.8s;
-            z-index: 2;
         }
 
         .cinta {
@@ -315,7 +311,6 @@
             background: #d0aaa4;
             left: 43px;
             bottom: 0;
-            z-index: 1;
         }
 
         .regalo.abierto .tapa {
@@ -379,6 +374,7 @@
             .foto-real {
                 width: 92%;
                 max-width: 500px;
+                height: auto;
             }
 
             .carta {
@@ -402,13 +398,8 @@
 
         <h1>Mi amor</h1>
 
-        <p class="texto-portada">
-            Esto es algo que hice con mucho amor para ti...
-        </p>
-
-        <p class="texto-portada">
-            Pero tendras que verlo poco a poco.
-        </p>
+        <p class="texto-portada">Esto es algo que hice con mucho amor para          ti...</p>
+<p class="texto-portada">Pero tendras que verlo poco a poco.</p>
 
         <a href="#dos-meses" class="boton" id="botonDescubrir">
             DESCUBRIR
@@ -485,7 +476,7 @@
             </div>
 
             <img
-                src="fotos/nosotros1.jpg"
+                src="fotos/Nosotros1.jpg"
                 alt="Nosotros ❤️"
                 class="foto-real"
             >
@@ -542,7 +533,7 @@
             </div>
 
             <img
-                src="fotos/nosotros2.jpg"
+                src="fotos/Nosotros2.jpg"
                 alt="Nosotros ❤️"
                 class="foto-real"
             >
@@ -606,7 +597,7 @@
             </div>
 
             <img
-                src="fotos/mia.jpg"
+                src="fotos/Yo1.jpg"
                 alt="Una foto mía ❤️"
                 class="foto-real"
             >
@@ -734,7 +725,7 @@
             </div>
 
             <img
-                src="fotos/el.jpg"
+                src="fotos/El1.jpg"
                 alt="Él ❤️"
                 class="foto-real"
             >
@@ -1208,7 +1199,7 @@
             </div>
 
             <div class="firma">
-                Toca la caja para que abras el regalo 🎁👀
+                Topa la caja para que abras el regalo 🎁👀
             </div>
 
 
@@ -1227,8 +1218,7 @@
             <div class="mensaje-regalo" id="mensajeRegalo">
 
                 <p>
-                    Holaaa, solo soy yo otra vez jajjaj, na mentiris.
-                    Hay algo más que quiero decirte... 🥹
+                    Holaaa, solo soy yo otra vez jajjaj, na mentiris. Hay algo más que quiero decirte... 🥹
                 </p>
 
                 <br>
@@ -1267,8 +1257,7 @@
            BOTÓN DESCUBRIR
         ========================= */
 
-        const botonDescubrir =
-            document.getElementById("botonDescubrir");
+        const botonDescubrir = document.getElementById("botonDescubrir");
 
         botonDescubrir.addEventListener("click", function(evento) {
 
@@ -1308,11 +1297,8 @@
            ABRIR REGALO
         ========================= */
 
-        const regalo =
-            document.getElementById("regalo");
-
-        const mensajeRegalo =
-            document.getElementById("mensajeRegalo");
+        const regalo = document.getElementById("regalo");
+        const mensajeRegalo = document.getElementById("mensajeRegalo");
 
         regalo.addEventListener("click", () => {
 
@@ -1325,4 +1311,4 @@
     </script>
 
 </body>
-                            </html>
+    </html>
